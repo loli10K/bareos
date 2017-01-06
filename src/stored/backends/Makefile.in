@@ -170,7 +170,6 @@ devclean: realclean
 	(cd $(srcdir); $(RMF) Makefile)
 
 libtool-install: all
-	$(RMF) $(DESTDIR)$(backenddir)/libbareossd-*.so
 	$(MKDIR) $(DESTDIR)$(backenddir)
 	@for backend in $(BUILD_BACKENDS); do \
 	   $(LIBTOOL_INSTALL_FINISH) $(INSTALL_LIB) $$backend $(DESTDIR)$(backenddir); \
